@@ -1,0 +1,8 @@
+node_modules/
+uploads/
+data.db
+.env
+.admin_hash
+*.log
+.DS_Store
+
