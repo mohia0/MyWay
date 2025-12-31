@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Review - Admin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="loginScreen" class="login-screen">
+            <div class="login-box">
+                <h2>Admin Login</h2>
+                <input type="password" id="passwordInput" placeholder="Enter password" autocomplete="current-password">
+                <button id="loginBtn" class="btn btn-primary">Login</button>
+                <div id="loginError" class="error hidden"></div>
+            </div>
+        </div>
+
+        <div id="adminView" class="admin-view hidden">
+            <header>
+                <h1>Design Review - Admin</h1>
+                <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+            </header>
+
+            <div class="upload-section">
+                <h2>Upload New Image</h2>
+                <form id="uploadForm">
+                    <input type="file" id="fileInput" accept="image/png,image/jpeg,image/jpg" required>
+                    <button type="submit" class="btn btn-primary">Upload Image</button>
+                </form>
+                <div id="uploadStatus" class="status-message"></div>
+            </div>
+
+            <div id="imagesList" class="images-list"></div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
+

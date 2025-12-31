@@ -1,0 +1,29 @@
+app = "art-director-review"
+primary_region = "iad"
+
+[build]
+
+[env]
+  PORT = "3000"
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = false
+  auto_start_machines = true
+  min_machines_running = 1
+  processes = ["app"]
+
+# Note: For persistent storage, create volumes and uncomment:
+# fly volumes create uploads_volume
+# fly volumes create data_volume
+# Then uncomment the mounts section below
+
+# [[mounts]]
+#   source = "uploads_volume"
+#   destination = "/app/uploads"
+#
+# [[mounts]]
+#   source = "data_volume"
+#   destination = "/app/data"
+

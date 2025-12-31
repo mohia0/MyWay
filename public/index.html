@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Review - Client View</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Design Review</h1>
+        </header>
+
+        <div id="imagesList" class="images-list"></div>
+
+        <div id="imageView" class="image-view hidden">
+            <div class="image-header">
+                <button id="backBtn" class="btn btn-secondary">← Back to Gallery</button>
+                <h2 id="imageTitle"></h2>
+                <div class="status-badge" id="statusBadge"></div>
+            </div>
+
+            <div class="image-container">
+                <img id="mainImage" alt="Design">
+                <canvas id="pinCanvas"></canvas>
+            </div>
+
+            <div class="controls">
+                <div class="action-buttons">
+                    <button id="approveBtn" class="btn btn-success">✓ Approve</button>
+                    <button id="requestChangesBtn" class="btn btn-warning">✗ Request Changes</button>
+                </div>
+                <div class="version-history">
+                    <h3>Version History</h3>
+                    <div id="versionsList"></div>
+                </div>
+            </div>
+
+            <div class="comments-section">
+                <h3>Comments</h3>
+                <div id="commentsList"></div>
+                <p class="info">Click on the image to add a comment</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="client.js"></script>
+</body>
+</html>
+
